@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLibrary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <a>
+                    <div class="logo-text">
+                        <h1>EduLibrary</h1>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="pilihan-buku.html">Pilihan Buku</a></li>
+                    <li><a href="favorit.html">Favorit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="search-container">
+                        <input type="text" autocomplete="off" id="searchInput" placeholder="Cari buku..."/>
+                        <ul id="searchResults" class="dropdown-results"></ul>
+                    </div>
+                    <h2><b>Buku Maya Pendidikan</b></h2>
+                    <p>Temukan Jalanmu Melalui Halaman - Halaman Pengetahuan</p>
+                    
+                    <div class="search-buttons">
+                        <button onclick="window.location.href='kls10/list.html'" class="grade-btn">Kelas 10</button>
+                        <button onclick="window.location.href='kls11/list.html'" class="grade-btn">Kelas 11</button>
+                        <button onclick="window.location.href='kls12/list.html'" class="grade-btn">Kelas 12</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="awan.svg" alt="Pelajar">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="skip.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Copyrights 2025 EduLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

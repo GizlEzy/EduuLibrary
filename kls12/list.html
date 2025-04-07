@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLibrary</title>
+    <link rel="stylesheet" href="/setel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="/logo.png" alt="Logo">
+                </div>
+                <a href="/index.html" class="logo-link">
+                    <div class="logo-text" >
+                        <h1>EduLibrary</h1>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Beranda</a></li>
+                    <li><a href="#" class="active">Pilihan Buku</a></li>
+                    <li><a href="/favorit.html">Favorit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="book-list-section">
+            <h2 class="judul-section">Daftar Buku Kelas 12</h2>
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" autocomplete="off" id="searchInput" placeholder="Cari buku disini">
+                        <button class="search-btn" id="searchBtn">
+                            <span class="text">Cari</span>
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="books-grid" id="booksGrid">
+                    <!-- Book Item 1 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Antropologi_BS_KLS_XII.pdf">
+                                <img src="cover/Antropologi_BS_KLS_XII_Cover.png" alt="Antropologi">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Antropologi untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 2 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Biologi_BS_KLS_XII_Rev.pdf">
+                                <img src="cover/Biologi_BS_KLS_XII_Cover.png" alt="Biologi">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Biologi untuk SMA/MA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 3 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Ekonomi_BS_KLS_XII.pdf">
+                                <img src="cover/Ekonomi_BS_KLS_XII_Cover.png" alt="Ekonomi">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Ekonomi untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 4 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Fisika_BS_KLS_XII.pdf">
+                                <img src="cover/Fisika_BS_KLS_XII_Cover.png" alt="Fisika">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Fisika untuk SMA/MA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 5 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Geografi_BS_KLS_XII.pdf">
+                                <img src="cover/Geografi_BS_KLS_XII_Cover.png" alt="Geografi">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Geografi untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 6 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Indonesia_BS_KLS_XII.pdf">
+                                <img src="cover/Indonesia_BS_KLS_XII_Cover.png" alt="Bahasa Indonesia">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Indonesia untuk SMA/MA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 7 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Indonesia_Lanjut_BS_KLS_XII.pdf">
+                                <img src="cover/Indonesia_Lanjut_BS_KLS_XII_Cover.png" alt="Bahasa Indonesia Tingkat Lanjut">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Indonesia Tingkat Lanjut untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 8 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Informatika_BS_KLS_XII.pdf">
+                                <img src="cover/Informatika_BS_KLS_XII_Cover.png" alt="Informatika">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Informatika untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 9 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Inggris_BS_KLS_XII.pdf">
+                                <img src="cover/Inggris_BS_KLS_XII_Cover.png" alt="Bahasa Inggris">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Inggris untuk SMA/MA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 10 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Inggris_Lanjut_BG_KLS_XII.pdf">
+                                <img src="cover/Inggris_Lanjut_BG_KLS_XII_Cover.png" alt="Bahasa Inggris Tingkat Lanjut">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Inggris Tingkat Lanjut untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 11 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Islam_BS_KLS_XII_.pdf">
+                                <img src="cover/Islam_BS_KLS_XII_Cover.png" alt="Pendidikan Islam">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Islam dan Budi Pekerti untuk SMA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 12 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Katolik_BS_KLS_XII.pdf">
+                                <img src="cover/Katolik_BS_KLS_XII_Cover.png" alt="Pendidikan Katolik">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Katolik dan Budi Pekerti untuk SMA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 13 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Kristen-BS-KLS-XII.pdf">
+                                <img src="cover/Kristen-BS-KLS-XII-Cover.png" alt="Pendidikan Kristen">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Kristen dan Budi Pekerti untuk SMA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 14 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Kimia_BS_KLS_XII.pdf">
+                                <img src="cover/Kimia_BS_KLS_XII_Cover.png" alt="Kimia">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Kimia untuk SMA/MA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 15 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Matematika-BS-KLS-XII.pdf">
+                                <img src="cover/Matematika-BS-KLS-XII-Cover.png" alt="Matematika">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Matematika untuk SMA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 16 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Matematika-Lanjut-BS-KLS-XII.pdf">
+                                <img src="cover/Matematika-Lanjut-BS-KLS-XII-Cover.png" alt="Matematika Tingkat Lanjut">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Matematika Tingkat Lanjut untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 17 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Pendidikan-Pancasila-BS-KLS-XII.pdf">
+                                <img src="cover/Pendidikan-Pancasila-BS-KLS-XII-Cover.png" alt="Pendidikan Pancasila">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Pancasila untuk SMA/MA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 18 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Sejarah_BS_KLS_XII.pdf">
+                                <img src="cover/Sejarah_BS_KLS_XII_Cover.png" alt="Sejarah">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Sejarah untuk SMA/SMK Kelas XII</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 19 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Sosiologi_BS_KLS_XII.pdf">
+                                <img src="cover/Sosiologi_BS_KLS_XII_Cover.png" alt="Sosiologi">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Sosiologi untuk SMA Kelas XII</h3>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>Tidak ada buku yang sesuai dengan pencarian Anda.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Copyrights 2025 EduLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

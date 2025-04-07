@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLibrary</title>
+  <link rel="stylesheet" href="setel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+      <div class="container">
+          <div class="logo-section">
+              <div class="logo">
+                  <img src="/logo.png" alt="Logo">
+              </div>
+              <a href="/index.html" class="logo-link">
+                  <div class="logo-text" >
+                      <h1>EduLibrary</h1>
+                  </div>
+              </a>
+          </div>
+          <nav>
+              <ul>
+                  <li><a href="/index.html">Beranda</a></li>
+                  <li><a href="pilihan-buku.html">Pilihan Buku</a></li>
+                  <li><a href="#" class="active">Favorit</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h2>Buku Favorit Anda</h2>
+    </section>
+
+    <section class="book-list" id="favoriteBookList">
+      <div class="container">
+        <div class="books-grid" id="booksGrid">
+<!-- Buku favorit akan ditampilkan di sini secara dinamis menggunakan JavaScript -->
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+        <p>&copy; Copyrights 2025 EduLibrary. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="favscript.js"></script>
+</body>
+</html>

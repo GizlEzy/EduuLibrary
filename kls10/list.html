@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLibrary</title>
+    <link rel="stylesheet" href="/setel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="/logo.png" alt="Logo">
+                </div>
+                <a href="/index.html" class="logo-link">
+                    <div class="logo-text" >
+                        <h1 >EduLibrary</h1>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Beranda</a></li>
+                    <li><a href="#" class="active">Pilihan Buku</a></li>
+                    <li><a href="/favorit.html">Favorit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="book-list-section">
+            <h2 class="judul-section">Daftar Buku Kelas 10</h2>
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" autocomplete="off" id="searchInput" placeholder="Cari buku disini">
+                        <button class="search-btn" id="searchBtn">
+                            <span class="text">Cari</span>
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="books-grid" id="booksGrid">
+                    <!-- Book Item 1 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Bahasa_Indonesia_BS_KLS_X_Rev.pdf">
+                                <img src="cover/Bahasa_Indonesia_BS_KLS_X_Rev_Cover.png" alt="Bahasa Indonesia">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK/MAK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Indonesia untuk SMA/MA/SMK/MAK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 2 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Bahasa-Inggris-BS-KLS-X.pdf">
+                                <img src="cover/Bahasa-Inggris-BS-KLS-X-cover.png" alt="Bahasa Inggris">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Bahasa Inggris untuk SMA/MA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 3 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Informatika-BS-KLS-X.pdf">
+                                <img src="cover/Informatika-BS-KLS-X-Cover.png" alt="Informatika">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Informatika untuk SMA Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 4 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="IPA_BS_KLS_X_Rev.pdf">
+                                <img src="cover/IPA_BS_KLS_X_Rev_Cover.png" alt="IPA">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Ilmu Pengetahuan Alam untuk SMA/MA Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 5 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="IPS_BG_KLS_X_Rev.pdf">
+                                <img src="cover/IPS_BS_KLS_X_Rev_Cover.png" alt="IPS">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Ilmu Pengetahuan Sosial untuk SMA/MA Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 6 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Islam-BS-KLS-X.pdf">
+                                <img src="cover/Islam-BS-KLS-X-Cover.png" alt="Pendidikan Islam">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Agama Islam dan Budi Pekerti untuk SMA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 7 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Katolik-BS-KLS-X.pdf">
+                                <img src="cover/Katolik-BS-KLS-X-Cover.png" alt="Pendidikan Katolik">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Agama Katolik dan Budi Pekerti untuk SMA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 8 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Kristen-BS-KLS-X.pdf">
+                                <img src="cover/Kristen-BS-KLS-X-Cover.png" alt="Pendidikan Kristen">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Agama Kristen dan Budi Pekerti untuk SMA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 9 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Matematika-BS-KLS-X.pdf">
+                                <img src="cover/Matematika-BS-KLS-X-Cover.png" alt="Matematika">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Matematika untuk SMA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 10 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Matematika_BS_KLS_X_Rev.pdf">
+                                <img src="cover/Matematika_BS_KLS_X_Rev_Cover.png" alt="Matematika Rev">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK/MAK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Matematika (Edisi Revisi) untuk SMA/MA/SMK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 11 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Pendidikan-Pancasila-BS-KLS-X.pdf">
+                                <img src="cover/Pendidikan-Pancasila-BS-KLS-X-Cover.png" alt="PP">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMA/MA/SMK/MAK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Pendidikan Pancasila untuk SMA/MA/SMK/MAK Kelas X</h3>
+                        </div>
+                    </div>
+
+                    <!-- Book Item 12 -->
+                    <div class="book-item">
+                        <div class="book-image">
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <a href="/viewer.html" data-filename="Sejarah-BS-KLS-X.pdf">
+                                <img src="cover/Sejarah-BS-KLS-X-Cover.png" alt="Sejarah">
+                                <span class="book-tag">PDF</span>
+                                <span class="book-level">SMK</span>
+                            </a>
+                        </div>
+                        <div class="book-info">
+                            <h3>Sejarah untuk SMK Kelas X</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>Tidak ada buku yang sesuai dengan pencarian Anda.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Copyrights 2025 EduLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

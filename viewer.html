@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <link rel="stylesheet" href="setel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <a href="/index.html" class="logo-link">
+                    <div class="logo-text" >
+                        <h1>EduLibrary</h1>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Beranda</a></li>
+                    <li><a href="#" class="active">Pilihan Buku</a></li>
+                    <li><a href="favorit.html">Favorit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="viewer-container">
+        <iframe id="pdf-frame" src=""></iframe>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

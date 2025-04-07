@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #3b5998;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ff7f50;
+    --text-color: #333;
+    --light-text: #fff;
+    --dark-blue: #2d4373;
+    --light-blue: #eef3ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Main Content Styles */
+main {
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 80px;
+
+    background-image: url('last.svg'); /* path ke file SVG */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* opsional: bikin background tetap saat scroll */
+}
+
+.hero {
+    
+    
+    padding: 50px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    margin-bottom: 100px;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-content p::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.search-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.grade-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.grade-btn:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    padding-bottom: 100px;
+    padding-left: 150px;
+    width: 600px;
+    max-width: 150%;
+    height: auto;
+    /*border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);*/
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #132344;
+    color: #bac9eb;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-content p::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .search-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    .login-button {
+        margin-top: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main {
+        background-image: url('last.png');
+    }
+
+}
+
+@media (max-width: 576px) {
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-text h1 {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 1.3rem;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hero-content h2 {
+        margin-top: -20px;
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .search-buttons {
+        flex-direction: column;
+    }
+    
+    .grade-btn {
+        width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 20px;
+        margin-top: 50px;
+
+    }
+
+    .search-container ul {
+        text-align: left;
+    }
+
+    .search-container ul li:hover {
+        background-color: #3b5998;
+        border-radius: 10px;
+    }
+}
+
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 0 40px 0;
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+    box-shadow: 0 0 10px rgba(59, 89, 152, 0.3);
+}
+
+.search-container ul {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 10;
+    display: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px 5px 10px 10px;
+}
+
+
+.search-container ul li:hover {
+    background-color: #dddfe4;
+    border-radius: 10px;
+}
+
+
+
+
+
